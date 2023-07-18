@@ -1,0 +1,191 @@
+/*  background-color: #009844; 포인트컬러  */
+
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KBO-Dia-Gothic_bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+.App {
+  text-align: center;
+  font-family: 'Pretendard-Regular';
+  list-style: none;
+  .navbar {
+    background-color: #fff !important;
+    height: 200px;
+    .container{
+      flex-direction: column;
+      img{
+        width: 100px !important;
+      }
+      .me-auto{
+        display: flex;
+        margin-right: 0 !important;
+        font-size: 20px;
+        margin-top: 20px;
+        .nav-link{
+          color: black;
+          width: 200px;
+          &:hover{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+
+  .main_swiper{
+    
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+      background-color: #fff;
+      border-radius: 0;
+      width: 10px;
+      height: 10px;
+    }
+
+    
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next,
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+      color: #fff;
+    }
+
+  }
+
+  .main_menu{
+    margin: 80px auto 0;
+    width: 1320px;
+    display: flex;
+    justify-content: center;
+    .col{
+      flex: 0 0;
+    }
+    .card_box{
+      width: 400px;
+      .card_title{
+        font-weight: bold;
+      }
+      .card_text{
+        font-size: 17px;
+      }
+    }
+    .card_btn{
+      background-color: tan;
+      border: none;
+    }
+
+  }
+
+
+  .best_item,
+  .new_item{
+    margin-top: 150px;
+    .title{
+      font-size: 35px;
+      margin: 50px auto;
+      font-weight: bold;
+      font-family: 'KBO-Dia-Gothic_bold';
+    }
+
+    .items{
+      margin-bottom: 20px;
+      .links{
+        text-decoration: none;
+        color: black;
+        div{
+          width: 250px;
+          height: 250px;
+          margin: 0 auto;
+          overflow: hidden;
+          img{
+            width: 250px;
+            
+            margin-bottom: 20px;
+            &:hover{
+              scale: 1.1;
+              transition: all 0.3s;
+            }
+          }
+        }
+
+        .product{
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .price{
+          font-size: 15px;
+          font-weight: bold;
+          margin-top: 10px;
+        }
+
+      }
+
+      .item_btn{
+        margin-top: 10px;
+        border: 1px solid tan;
+        background-color: #fff;
+        font-size: 15px;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        &:hover{
+          background-color: tan;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+.basket{
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translate(-50%,0);
+  background-color:  #1b1c1baf;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 9999;
+
+}
+
+.scroll__container{
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+  #top{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px;
+    border: 1px solid tan;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+
+}
+
+

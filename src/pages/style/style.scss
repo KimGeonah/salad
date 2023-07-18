@@ -1,0 +1,114 @@
+
+ul{padding: 0;}
+li{list-style: none;}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+
+/* footer ----------------------------------------------- */
+
+
+.footer_outer{
+
+    margin-top: 50px;
+    background-color: #eee;
+    .footer{
+        width: 1320px;
+        padding: 50px 0;
+        .info,
+        .time,
+        .bank{
+            text-align: left;
+            h3{
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            li{
+                margin-top: 15px;
+                span{
+                    font-weight: bold;
+                }
+            }
+
+            p{
+                color: #6c6a6a;
+            }
+        }
+    }
+}
+
+
+/* page01 ----------------------------------------------- */
+
+  .best_item,
+  .new_item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1320px;
+    margin: 0 auto !important;
+
+    .items{
+      margin-bottom: 20px;
+      .links{
+        text-decoration: none;
+        color: black;
+        div{
+          width: 350px;
+          height: 250px;
+          margin: 0 auto;
+          overflow: hidden;
+          img{
+            width: 250px;
+            
+            margin-bottom: 20px;
+            &:hover{
+              scale: 1.1;
+              transition: all 0.3s;
+            }
+          }
+        }
+
+        .product{
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .price{
+          font-size: 15px;
+          font-weight: bold;
+          margin-top: 10px;
+        }
+
+      }
+
+      .item_btn{
+        margin-top: 10px;
+        border: 1px solid tan;
+        background-color: #fff;
+        font-size: 15px;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        &:hover{
+          background-color: tan;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }

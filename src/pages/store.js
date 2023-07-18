@@ -1,18 +1,13 @@
 import {configureStore, createSlice} from '@reduxjs/toolkit';
 
 
-const user = createSlice({//state 생성
+const user = createSlice({
     name : 'user',
-    //initialState : '홍길동',
+
     initialState : {name :'김건아', memberYear :1 },
 
     reducers : {
-        //changeName(){
-        //    return '이순신'
-        //}
-        //changeName(state){
-        //    return state + ':Green'
-        //}
+
         changeName(state){
             state.name = state.name + ' [ 아무거나 ] '
         },

@@ -1,57 +1,170 @@
+@charset "UTF-8";
+/*  background-color: #009844; 포인트컬러  */
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'KBO-Dia-Gothic_bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+  font-family: "KBO-Dia-Gothic_bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
-
-
-
 .App {
   text-align: center;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   list-style: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .navbar {
+  background-color: #fff !important;
+  height: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.App .navbar .container {
   flex-direction: column;
-  align-items: center;
+}
+.App .navbar .container img {
+  width: 100px !important;
+}
+.App .navbar .container .me-auto {
+  display: flex;
+  margin-right: 0 !important;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.App .navbar .container .me-auto .nav-link {
+  color: black;
+  width: 200px;
+}
+.App .navbar .container .me-auto .nav-link:hover {
+  font-weight: bold;
+}
+.App .main_swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .App .main_swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #fff;
+  border-radius: 0;
+  width: 10px;
+  height: 10px;
+}
+.App .main_swiper .swiper-button-prev, .App .main_swiper .swiper-rtl .swiper-button-next,
+.App .main_swiper .swiper-button-next, .App .main_swiper .swiper-rtl .swiper-button-prev {
+  color: #fff;
+}
+.App .main_menu {
+  margin: 80px auto 0;
+  width: 1320px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App .main_menu .col {
+  flex: 0 0;
+}
+.App .main_menu .card_box {
+  width: 400px;
+}
+.App .main_menu .card_box .card_title {
+  font-weight: bold;
+}
+.App .main_menu .card_box .card_text {
+  font-size: 17px;
+}
+.App .main_menu .card_btn {
+  background-color: tan;
+  border: none;
+}
+.App .best_item,
+.App .new_item {
+  margin-top: 150px;
+}
+.App .best_item .title,
+.App .new_item .title {
+  font-size: 35px;
+  margin: 50px auto;
+  font-weight: bold;
+  font-family: "KBO-Dia-Gothic_bold";
+}
+.App .best_item .items,
+.App .new_item .items {
+  margin-bottom: 20px;
+}
+.App .best_item .items .links,
+.App .new_item .items .links {
+  text-decoration: none;
+  color: black;
+}
+.App .best_item .items .links div,
+.App .new_item .items .links div {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.App .best_item .items .links div img,
+.App .new_item .items .links div img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+.App .best_item .items .links div img:hover,
+.App .new_item .items .links div img:hover {
+  scale: 1.1;
+  transition: all 0.3s;
+}
+.App .best_item .items .links .product,
+.App .new_item .items .links .product {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.App .best_item .items .links .price,
+.App .new_item .items .links .price {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.App .best_item .items .item_btn,
+.App .new_item .items .item_btn {
+  margin-top: 10px;
+  border: 1px solid tan;
+  background-color: #fff;
+  font-size: 15px;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.App .best_item .items .item_btn:hover,
+.App .new_item .items .item_btn:hover {
+  background-color: tan;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.basket {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translate(-50%, 0);
+  background-color: rgba(27, 28, 27, 0.6862745098);
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 9999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scroll__container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
 }
-
+.scroll__container #top {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 20px;
+  border: 1px solid tan;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}/*# sourceMappingURL=App.css.map */

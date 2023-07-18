@@ -1,62 +1,287 @@
-const data = [
-    {
-      id: '01',
-      image: process.env.PUBLIC_URL+'/images/salad_01.jpg',
-      desc: '건강한 맛 그대로 담은 담백&고소 닭가슴살 샐러드!!',
-      title: '[데일리] 닭가슴살 오징어 샐러드',
-      price: '6,500원'
-    },
-    {
-      id: '02',
-      image: process.env.PUBLIC_URL+'/images/salad_02.jpg',
-      desc: '달달하고 아삭한 당근라페와 탱글한 소시지로 든든하게 즐기세요',
-      title: '[데일리] 당근라페 소시지 샐러드',
-      price: '7,000원'
-    },
-    {
-      id: '03',
-      image: process.env.PUBLIC_URL+'/images/salad_03.jpg',
-      desc: '한 입에 먹는 롤치즈와 고소한 메추리알까지 함께 맛보는 샐러드!',
-      title: '[데일리] 롤치즈 메추리알 샐러드',
-      price: '6,700원'
-    },
-    {
-      id: '04',
-      image: process.env.PUBLIC_URL+'/images/salad_04.jpg',
-      desc: '다채로운 과일과 진한 리코타치즈를 만나요!',
-      title: '[데일리] 리코타 과일 샐러드',
-      price: '6,300원'
-    },
-    {
-      id: '05',
-      image: process.env.PUBLIC_URL+'/images/salad_05.jpg',
-      desc: ' 보리와 귀리가 함께해서 더욱 포만감이 높아요!',
-      title: '[데일리] 목살 스테이크 샐러드',
-      price: ' 6,000원'
-    },
-    {
-      id: '06',
-      image: process.env.PUBLIC_URL+'/images/salad_06.jpg',
-      desc: '담백함 가득한 불고기와 식감을 더해주는 아삭한 양파까지!',
-      title: '[데일리] 불고기 샐러드',
-      price: '5,500원'
-    },
-    {
-      id: '07',
-      image: process.env.PUBLIC_URL+'/images/salad_07.jpg',
-      desc: ' 파스타와 향긋한 올리브, 새우, 오징어를 함께 먹어요!',
-      title: '[데일리] 쉬림프 크림파스타 샐러드',
-      price: '4,900원'
-    },
-    {
-      id: '08',
-      image: process.env.PUBLIC_URL+'/images/salad_08.jpg',
-      desc: ' 탱탱한 식감을 느낄 수 있는 크래미아 샐러드!',
-      title: '[데일리] 크래미아 베이컨 샐러드',
-      price: '5,900원'
-    },
+const bestItems = [
+
+  {
+    id: '01',
+    image: process.env.PUBLIC_URL+'/images/best_01.jpg',
+    title: '[데일리+프리미엄] 샐러드 골라담기',
+    desc: '다양한 샐러드를 내 입맛에 원하는대로 쏙쏙~ 골라서 구매하세요!',
+    discount:'30%',
+    realprice:'4,000원',
+    price: '2,800원',
+  },
+
+  {
+    id: '02',
+    image: process.env.PUBLIC_URL+'/images/best_02.jpg',
+    title: '[데일리] 그린 샐러드(드레싱랜덤)',
+    desc: '가장 베이직하면서도 완벽한 맛! [드레싱 랜덤발송]',
+    discount:'27%',
+    realprice:'4,400원',
+    price: '3,200원',
+  },
+
+  {
+    id: '03',
+    image: process.env.PUBLIC_URL+'/images/best_03.jpg',
+    title: '하루 900Kcal 프로그램',
+    desc: '슬림쿡 최다 판매 식단조절형 프로그램',
+    price: '144,900원',
+  },
+
+  {
+    id: '04',
+    image: process.env.PUBLIC_URL+'/images/best_04.jpg',
+    title: '[SET] 인기 샐러드 8종 맛보기 세트',
+    desc: '슬림쿡 인기 데일리 샐러드 8종을 받아보는 알뜰 샐러드 SET! ',
+    discount:'11%',
+    realprice:'57,400원',
+    price: '51,000원',
+  },
+
+  {
+    id: '05',
+    image: process.env.PUBLIC_URL+'/images/best_05.jpg',
+    title: '하루 600Kcal A(라이스+샌드위치) 프로그램',
+    desc: 'SBS 스페셜 방송에 방영 된 화제의 식단! ',
+    price: '114,400원',
+  },
+
+  {
+    id: '06',
+    image: process.env.PUBLIC_URL+'/images/best_06.jpg',
+    title: '덴마크 프로그램',
+    desc: '훈제란,채소,토스트 자몽으로 구성된 단기관리 식단! 덴마크 프로그램',
+    price: '115,500원',
+  },
+
+  {
+    id: '07',
+    image: process.env.PUBLIC_URL+'/images/best_07.jpg',
+    title: '[정기배송] 샐럽위치와 샐러드',
+    desc: '샐럽위치에 샐러드로 꾸준하게 관리해보세요!',
+    discount:'11%',
+    realprice:'37,300원',
+    price: '33,300원',
+  },
+
+  {
+    id: '08',
+    image: process.env.PUBLIC_URL+'/images/best_08.jpg',
+    title: '[SET] 인기샐러드 5종 맛보기 세트',
+    desc: '슬림쿡 인기 데일리 샐러드 5종을 받아보는 알뜰 샐러드 SET!',
+    discount:'11%',
+    realprice:'37,000원',
+    price: '33,000원',
+  },
+
+  {
+    id: '09',
+    image: process.env.PUBLIC_URL+'/images/best_09.jpg',
+    title: '[데일리] 훈제오리 고구마 샐러드',
+    desc: '든든한 한 끼 보양식으로 최고!',
+    discount:'12%',
+    realprice:'6,800원',
+    price: '6,000원',
+  },
+
+  
+  {
+    id: '10',
+    image: process.env.PUBLIC_URL+'/images/best_10.jpg',
+    title: '[데일리] 불고기 샐러드',
+    desc: '가장 베이직하면서도 완벽한 맛! [드레싱 랜덤발송]',
+    discount:'27%',
+    realprice:'4,400원',
+    price: '3,200원',
+  },
+
+  {
+    id: '11',
+    image: process.env.PUBLIC_URL+'/images/best_11.jpg',
+    title: '[데일리] 닭가슴살 오징어 샐러드',
+    desc: '담백함 가득한 불고기와 식감을 더해주는 아삭한 양파까지! 맛있게 먹는 샐러드!',
+    discount:'12%',
+    realprice:'6,800원',
+    price: '6,000원',
+  },
+  {
+    id: '12',
+    image: process.env.PUBLIC_URL+'/images/best_12.jpg',
+    title: '[정기배송] 인기샐러드 5종 하루 두끼',
+    desc: '한 달 동안 매주 1주분(1일2식)의 샐러드를 정기적으로 배송해드리는 상품!',
+    discount:'24%',
+    realprice:'284,000원',
+    price: '216,300원',
+  },
+  {
+    id: '13',
+    image: process.env.PUBLIC_URL+'/images/best_13.jpg',
+    title: '하루 600Kcal B (라이스+샐러드) 프로그램',
+    desc: 'SBS 스페셜 방송에 방영 된 화제의 식단! ',
+    price: '114,400원'
+  },
+
+  {
+    id: '14',
+    image: process.env.PUBLIC_URL+'/images/best_14.jpg',
+    title: '[정기배송]그린 샐러드',
+    desc: '신선함이 가득한 다양한 야채를 정기배송으로 느낄 수있는 베이직 샐러드! ',
+    discount:'25%',
+    realprice:'92,000원',
+    price: '69,300원',
+  },
+  
+  {
+    id: '15',
+    image: process.env.PUBLIC_URL+'/images/best_15.jpg',
+    title: '[데일리] 샐러드 골라담기',
+    desc: '매일! 가볍게! 데일리 샐러드 내 입맛대로 골라담아 보세요',
+    discount:'30%',
+    realprice:'4,000원',
+    price: '2,800원',
+  },
+]
+
+
+
+const newItems = [
+  {
+    id: '01',
+    image: process.env.PUBLIC_URL+'/images/new_01.jpg',
+    title: '채소믹스 500g / 1kg',
+    desc: '진정한 풀파티! 아삭하고 신선한 내 마음대로 샐러드',
+    realprice:'6,000원',
+    price: '4,900원',
+    discount:'18%'
+  },
+
+
+  {
+    id: '02',
+    image: process.env.PUBLIC_URL+'/images/new_02.jpg',
+    title: '[SET] 포케샐러드 맛보기 세트 (3종)',
+    desc: '하와이안 쉬림프 갈릭,블랙페퍼 치킨,오리엔탈 두부',
+    realprice:'40,800원',
+    price: '29,900원',
+    discount:'27%'
+  },
+
+  {
+    id: '03',
+    image: process.env.PUBLIC_URL+'/images/new_03.jpg',
+    title: '[슬림쿡 런치] 도시락 정기배송 (5일)',
+    desc: '점심으로 만나보는 슬림쿡 도시락! 매일 매일 달라지는 메뉴',
+    price:'39,500원',
+  },
+
+  {
+    id: '04',
+    image: process.env.PUBLIC_URL+'/images/new_04.jpg',
+    title: '[슬림쿡 런치] 도시락 정기배송 (10일)',
+    desc: '점심으로 만나보는 슬림쿡 도시락! 매일 매일 달라지는 메뉴',
+    price: '79,000원',
+  },
+
+  {
+    id: '05',
+    image: process.env.PUBLIC_URL+'/images/new_05.jpg',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (5일)',
+    desc: '* 도시락 + 간식 구성 (5일치)',
+    price: '43,000원'
+  },
+
+  {
+    id: '06',
+    image: process.env.PUBLIC_URL+'/images/new_06.jpg',
+    title: '[슬림쿡 런치] 도시락',
+    desc: '* 도시락 구성 (1일치)',
+    price: '7,900원',
+  },
+
+  {
+    id: '07',
+    image: process.env.PUBLIC_URL+'/images/new_07.jpg',
+    title: '[슬림쿡 런치] 도시락 정기배송 (3일)',
+    desc: '* 도시락 구성 (3일치)',
+    price: '23,700원',
+  },
+
+  {
+    id: '08',
+    image: process.env.PUBLIC_URL+'/images/new_08.jpg',
+    title: '블랙페퍼 치킨 포케샐러드',
+    desc: '호불호없이 누구나 좋아할 대중적인 포케 ',
+    realprice:'13,600원',
+    price: '10,900원',
+    discount:'20%'
+  },
+
+  {
+    id: '09',
+    image: process.env.PUBLIC_URL+'/images/new_09.jpg',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (10일)',
+    desc: '*도시락 + 간식 구성 (10일치)',
+    price: '86,000원',
+  },
+
+  
+  {
+    id: '10',
+    image: process.env.PUBLIC_URL+'/images/new_10.jpg',
+    title: '하와이안 쉬림프 갈릭 포케샐러드',
+    desc: '하와이에서 먹던 그맛 그대로 살린, 이국적인 포케',
+    realprice:'13,600원',
+    price: '10,900원',
+    discount:'20%'
+  },
+
+  {
+    id: '11',
+    image: process.env.PUBLIC_URL+'/images/new_11.jpg',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (3일)',
+    desc: '*도시락 + 간식 구성 (3일치)',
+    price: '25,800원',
+  },
+
+  {
+    id: '12',
+    image: process.env.PUBLIC_URL+'/images/new_12.jpg',
+    title: '[슬림쿡 런치] 도시락 + 간식',
+    desc: '* 도시락 + 간식 구성 (1일치)',
+    price: '8,600원',
+  },
+
+
+  {
+    id: '13',
+    image: process.env.PUBLIC_URL+'/images/new_13.jpg',
+    title: '오리엔탈 두부 포케샐러드',
+    desc: '아시안 퓨전 스타일의 포케 (드레싱X)',
+    realprice:'13,600원',
+    price: '10,900원',
+    discount:'20%'
+  },
+
+  {
+    id: '14',
+    image: process.env.PUBLIC_URL+'/images/new_14.jpg',
+    title: '[슬림쿡 런치] 도시락 정기배송 (5일)',
+    desc: '* 도시락 구성 (5일치)',
+    price: '39,500원',
+  },
+
+  {
+    id: '15',
+    image: process.env.PUBLIC_URL+'/images/new_15.jpg',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (5일)',
+    desc: '* 도시락 + 간식 구성 (5일치)',
+    price: '43,000원',
+  },
 
 ]
 
 
-export default data
+
+
+
+export {  bestItems, newItems };

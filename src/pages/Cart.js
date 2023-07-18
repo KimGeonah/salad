@@ -2,18 +2,19 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 import  {useDispatch, useSelector} from 'react-redux';
 import { changeName,changeYear,deleteItem,addCount,subCount } from './store';
+import './style/style.css'; 
 
 export default function Cart() {
 
-    //const state = useSelector((state) => {return state})
-    //store에 있는 state를 가져오는 Hooks
 
     const state = useSelector((state) => state)
     const dispatch = useDispatch()
 
   return (
     <div>
-        <h2 style={{marginTop:50}}><span style={{color:'black', fontWeight:'bold'}}>{state.user.name}</span>님의 장바구니</h2>
+        <h2 className='cart_title'>
+          <span>{state.user.name}</span>님의 장바구니
+          </h2>
         <button onClick={() => dispatch(changeName())} style={{border:'none',backgroundColor:'tan',fontWeight:'bold',width:150,height:40,marginTop:10,marginBottom:30}}>닉네임보이기</button>
         <h3 style={{fontSize:15}} >가입기간 : {state.user.memberYear} 년</h3>
         <button style={{border:'none',backgroundColor:'tan',fontWeight:'bold'}} onClick={() => dispatch(changeYear(1))}>+</button>

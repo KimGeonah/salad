@@ -1,5 +1,5 @@
 ul {
-  padding: 0;
+  padding: 0 !important;
 }
 
 li {
@@ -54,54 +54,165 @@ li {
   color: #6c6a6a;
 }
 
-/* page01 ----------------------------------------------- */
+/* detail ----------------------------------------------- */
+.detail_title {
+  font-family: "KBO-Dia-Gothic_bold";
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.detail_box {
+  display: flex;
+  justify-content: center;
+  width: 1320px;
+  margin: 0 auto;
+  background-color: #f3edd3;
+  padding: 70px 0;
+  margin-bottom: 100px;
+}
+.detail_box .detail_img {
+  width: 400px;
+  margin-right: 50px;
+}
+.detail_box .detail_info {
+  text-align: left;
+}
+.detail_box .detail_info .info_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+.detail_box .detail_info .info_desc {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #6c6a6a;
+}
+.detail_box .detail_info ul {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+}
+.detail_box .detail_info ul .info_discount {
+  color: green;
+}
+.detail_box .detail_info ul .info_price {
+  margin-left: 10px;
+}
+.detail_box .detail_info .info_realprice {
+  font-size: 20px;
+  color: #6c6a6a;
+  margin-bottom: 100px;
+}
+.detail_box .detail_info .info_btn {
+  border: none;
+  background-color: tan;
+  font-weight: bold;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 30px;
+}
+
+/* detail ----------------------------------------------- */
+.cart_title {
+  margin-top: 50px;
+}
+.cart_title span {
+  color: black;
+  font-weight: bold;
+}
+
+/* page ----------------------------------------------- */
+.main_title {
+  font-family: "KBO-Dia-Gothic_bold";
+  padding: 50px 0;
+  background-color: rgba(210, 180, 140, 0.323);
+  margin: 10px auto 50px;
+}
+
 .best_item,
-.new_item {
+.new_item,
+.delivery_item {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   width: 1320px;
   margin: 0 auto !important;
 }
-.best_item .items,
-.new_item .items {
-  margin-bottom: 20px;
-}
 .best_item .items .links,
-.new_item .items .links {
+.new_item .items .links,
+.delivery_item .items .links {
   text-decoration: none;
   color: black;
 }
 .best_item .items .links div,
-.new_item .items .links div {
+.new_item .items .links div,
+.delivery_item .items .links div {
   width: 350px;
   height: 250px;
   margin: 0 auto;
   overflow: hidden;
 }
 .best_item .items .links div img,
-.new_item .items .links div img {
+.new_item .items .links div img,
+.delivery_item .items .links div img {
   width: 250px;
   margin-bottom: 20px;
 }
 .best_item .items .links div img:hover,
-.new_item .items .links div img:hover {
+.new_item .items .links div img:hover,
+.delivery_item .items .links div img:hover {
   scale: 1.1;
   transition: all 0.3s;
 }
-.best_item .items .links .product,
-.new_item .items .links .product {
+.best_item .items .links .product_sub,
+.new_item .items .links .product_sub,
+.delivery_item .items .links .product_sub {
   margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
+  text-align: left;
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px 0;
 }
-.best_item .items .links .price,
-.new_item .items .links .price {
+.best_item .items .links .realprice,
+.new_item .items .links .realprice,
+.delivery_item .items .links .realprice {
   font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: left;
+  color: #b0aeae;
+  padding: 10px 0;
+}
+.best_item .items .links ul,
+.new_item .items .links ul,
+.delivery_item .items .links ul {
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+}
+.best_item .items .links ul .discount,
+.new_item .items .links ul .discount,
+.delivery_item .items .links ul .discount {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.best_item .items .links ul .price,
+.new_item .items .links ul .price,
+.delivery_item .items .links ul .price {
+  font-weight: bold;
+  font-size: 20px !important;
+  margin: 0 !important;
 }
 .best_item .items .item_btn,
-.new_item .items .item_btn {
+.new_item .items .item_btn,
+.delivery_item .items .item_btn {
   margin-top: 10px;
   border: 1px solid tan;
   background-color: #fff;
@@ -113,7 +224,8 @@ li {
   font-weight: bold;
 }
 .best_item .items .item_btn:hover,
-.new_item .items .item_btn:hover {
+.new_item .items .item_btn:hover,
+.delivery_item .items .item_btn:hover {
   background-color: tan;
   transition: all 0.3s;
 }/*# sourceMappingURL=style.css.map */

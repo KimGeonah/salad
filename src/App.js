@@ -19,7 +19,7 @@ import Cart from './pages/Cart';
 import Detail from './pages/Detail';
 import Footer from './pages/Footer';
 
-import {bestItems , newItems } from './pages/productData';
+import {bestItems , newItems,deliveryItems} from './pages/productData';
 import {Container,Nav,Navbar,Col,Row,Button,Card} from 'react-bootstrap/';
 import {Routes,Route, Link, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
@@ -39,6 +39,7 @@ function App() {
 
   const [bests] = useState(bestItems)
   const [news] = useState(newItems)
+  const [deliverys] = useState(deliveryItems)
   const navigate = useNavigate()
   const state = useSelector((state) => state)
   const dispatch = useDispatch()
@@ -78,7 +79,7 @@ function App() {
         <Route path='/' element={
 
 
-        <div style={{marginTop:50}}>
+        <div >
 
           <Swiper className='main_swiper'
            modules={[Navigation, Pagination, Scrollbar,Autoplay, A11y]}
@@ -224,7 +225,43 @@ function App() {
 
           </Container> 
 
+          <Container className='delivery_item'>
 
+<h2 className='title' >정기배송 샐러드</h2>
+
+<Row>
+
+{deliverys.slice(0, 8).map((best,index)=>{
+
+return(
+  <Col className='items' key={index}>
+   <Link className='links' to={`detail/${index}`} >
+   <div>
+  <img src={best.image} alt='product_img'/>
+  </div>
+  <h2 className='product'>{best.title}</h2>
+  <h2 className='price'>{best.price}</h2>
+</Link>
+
+<button className='item_btn'onClick={()=>{
+  dispatch(addItem({id:best.id, title: best.title,
+  count :1}))
+  setItemAdded(true);
+  setTimeout(() => setItemAdded(false), 1500); 
+
+}}>장바구니</button>
+  </Col>
+  
+)
+
+})}
+
+</Row>
+
+{ itemAdded && <p className='basket'>장바구니에 추가되었습니다.</p>} 
+
+
+          </Container> 
 
 
 
@@ -253,7 +290,11 @@ function App() {
 
 
         <Route path='/shop/detail/:id' element={<Detail bests={bests} />} >
-        </Route>
+        </Route> 
+
+        <Route path='/detail/:id' element={<Detail bests={bests} />} />
+
+
 
         <Route path='cart' element={<Cart/>} >
         </Route>

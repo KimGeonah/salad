@@ -72,57 +72,63 @@
   background-color: tan;
   border: none;
 }
-.App .best_item,
-.App .new_item {
-  margin-top: 150px;
-}
 .App .best_item .title,
-.App .new_item .title {
+.App .new_item .title,
+.App .delivery_item .title {
   font-size: 35px;
   margin: 50px auto;
   font-weight: bold;
   font-family: "KBO-Dia-Gothic_bold";
 }
 .App .best_item .items,
-.App .new_item .items {
+.App .new_item .items,
+.App .delivery_item .items {
   margin-bottom: 20px;
 }
 .App .best_item .items .links,
-.App .new_item .items .links {
+.App .new_item .items .links,
+.App .delivery_item .items .links {
   text-decoration: none;
   color: black;
 }
 .App .best_item .items .links div,
-.App .new_item .items .links div {
+.App .new_item .items .links div,
+.App .delivery_item .items .links div {
   width: 250px;
   height: 250px;
   margin: 0 auto;
   overflow: hidden;
 }
 .App .best_item .items .links div img,
-.App .new_item .items .links div img {
+.App .new_item .items .links div img,
+.App .delivery_item .items .links div img {
   width: 250px;
   margin-bottom: 20px;
 }
 .App .best_item .items .links div img:hover,
-.App .new_item .items .links div img:hover {
+.App .new_item .items .links div img:hover,
+.App .delivery_item .items .links div img:hover {
   scale: 1.1;
   transition: all 0.3s;
 }
 .App .best_item .items .links .product,
-.App .new_item .items .links .product {
+.App .new_item .items .links .product,
+.App .delivery_item .items .links .product {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 .App .best_item .items .links .price,
-.App .new_item .items .links .price {
+.App .new_item .items .links .price,
+.App .delivery_item .items .links .price {
   font-size: 15px;
   font-weight: bold;
   margin-top: 10px;
 }
 .App .best_item .items .item_btn,
-.App .new_item .items .item_btn {
+.App .new_item .items .item_btn,
+.App .delivery_item .items .item_btn {
   margin-top: 10px;
   border: 1px solid tan;
   background-color: #fff;
@@ -134,7 +140,8 @@
   font-weight: bold;
 }
 .App .best_item .items .item_btn:hover,
-.App .new_item .items .item_btn:hover {
+.App .new_item .items .item_btn:hover,
+.App .delivery_item .items .item_btn:hover {
   background-color: tan;
   transition: all 0.3s;
 }

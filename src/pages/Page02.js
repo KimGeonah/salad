@@ -20,17 +20,28 @@ export default function Page02() {
 
   return (
 
+    <>
+    <h2 className='main_title'>신상품 샐러드</h2>
 <div className='best_item'>
 {newArr.map((best,index)=>{
 
 return(
+  
   <Col className='items' key={index} md={3}>
    <Link className='links' to={`detail/${index}`} >
    <div>
   <img src={best.image} alt='product_img'/>
   </div>
-  <h2 className='product'>{best.title}</h2>
-  <h2 className='price'>{best.price}</h2>
+
+  <h2 className='product_sub'>{best.title}</h2>
+  <ul>
+    <li className='discount'>{best.discount}</li>
+
+    <li className='price'>{best.price}</li>
+  </ul>
+  <h2 className='realprice'><strike>{best.realprice}</strike> </h2>
+
+
 </Link>
 
 <button className='item_btn'onClick={()=>{
@@ -49,6 +60,7 @@ return(
   { itemAdded && <p className='basket'>장바구니에 추가되었습니다.</p>} 
 <Outlet></Outlet>
 </div>
+</>
   )
 }
 

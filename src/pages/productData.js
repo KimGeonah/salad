@@ -25,6 +25,8 @@ const bestItems = [
     image: process.env.PUBLIC_URL+'/images/best_03.jpg',
     title: '하루 900Kcal 프로그램',
     desc: '슬림쿡 최다 판매 식단조절형 프로그램',
+    discount:'0%',
+    realprice:'144,900원',
     price: '144,900원',
   },
 
@@ -41,8 +43,10 @@ const bestItems = [
   {
     id: '05',
     image: process.env.PUBLIC_URL+'/images/best_05.jpg',
-    title: '하루 600Kcal A(라이스+샌드위치) 프로그램',
+    title: '하루 600Kcal A 프로그램',
     desc: 'SBS 스페셜 방송에 방영 된 화제의 식단! ',
+    discount:'0%',
+    realprice:'114,400원',
     price: '114,400원',
   },
 
@@ -51,6 +55,8 @@ const bestItems = [
     image: process.env.PUBLIC_URL+'/images/best_06.jpg',
     title: '덴마크 프로그램',
     desc: '훈제란,채소,토스트 자몽으로 구성된 단기관리 식단! 덴마크 프로그램',
+    discount:'0%',
+    realprice:'115,500원',
     price: '115,500원',
   },
 
@@ -116,8 +122,10 @@ const bestItems = [
   {
     id: '13',
     image: process.env.PUBLIC_URL+'/images/best_13.jpg',
-    title: '하루 600Kcal B (라이스+샐러드) 프로그램',
+    title: '하루 600Kcal B 프로그램',
     desc: 'SBS 스페셜 방송에 방영 된 화제의 식단! ',
+    discount:'0%',
+    realprice:'114,400원',
     price: '114,400원'
   },
 
@@ -171,6 +179,8 @@ const newItems = [
     image: process.env.PUBLIC_URL+'/images/new_03.jpg',
     title: '[슬림쿡 런치] 도시락 정기배송 (5일)',
     desc: '점심으로 만나보는 슬림쿡 도시락! 매일 매일 달라지는 메뉴',
+    discount:'0%',
+    realprice:'39,500원',
     price:'39,500원',
   },
 
@@ -180,13 +190,17 @@ const newItems = [
     title: '[슬림쿡 런치] 도시락 정기배송 (10일)',
     desc: '점심으로 만나보는 슬림쿡 도시락! 매일 매일 달라지는 메뉴',
     price: '79,000원',
+    discount:'0%',
+    realprice:'79,000원',
   },
 
   {
     id: '05',
     image: process.env.PUBLIC_URL+'/images/new_05.jpg',
-    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (5일)',
+    title: '[슬림쿡 런치] 도시락 정기배송 (5일)',
     desc: '* 도시락 + 간식 구성 (5일치)',
+    discount:'0%',
+    realprice:'43,000원',
     price: '43,000원'
   },
 
@@ -195,6 +209,8 @@ const newItems = [
     image: process.env.PUBLIC_URL+'/images/new_06.jpg',
     title: '[슬림쿡 런치] 도시락',
     desc: '* 도시락 구성 (1일치)',
+    discount:'0%',
+    realprice:'7,900원',
     price: '7,900원',
   },
 
@@ -203,6 +219,8 @@ const newItems = [
     image: process.env.PUBLIC_URL+'/images/new_07.jpg',
     title: '[슬림쿡 런치] 도시락 정기배송 (3일)',
     desc: '* 도시락 구성 (3일치)',
+    discount:'0%',
+    realprice:'23,700원',
     price: '23,700원',
   },
 
@@ -219,8 +237,10 @@ const newItems = [
   {
     id: '09',
     image: process.env.PUBLIC_URL+'/images/new_09.jpg',
-    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (10일)',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송',
     desc: '*도시락 + 간식 구성 (10일치)',
+    discount:'0%',
+    realprice:'86,000원',
     price: '86,000원',
   },
 
@@ -238,9 +258,11 @@ const newItems = [
   {
     id: '11',
     image: process.env.PUBLIC_URL+'/images/new_11.jpg',
-    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (3일)',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송',
     desc: '*도시락 + 간식 구성 (3일치)',
     price: '25,800원',
+    discount:'0%',
+    realprice:'25,800원',
   },
 
   {
@@ -249,6 +271,8 @@ const newItems = [
     title: '[슬림쿡 런치] 도시락 + 간식',
     desc: '* 도시락 + 간식 구성 (1일치)',
     price: '8,600원',
+    discount:'0%',
+    realprice:'8,600원',
   },
 
 
@@ -268,20 +292,145 @@ const newItems = [
     title: '[슬림쿡 런치] 도시락 정기배송 (5일)',
     desc: '* 도시락 구성 (5일치)',
     price: '39,500원',
+    discount:'0%',
+    realprice:'39,500원',
   },
 
   {
     id: '15',
     image: process.env.PUBLIC_URL+'/images/new_15.jpg',
-    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 (5일)',
+    title: '[슬림쿡 런치] 도시락 + 간식 정기배송 ',
     desc: '* 도시락 + 간식 구성 (5일치)',
     price: '43,000원',
+    discount:'0%',
+    realprice:'43,000원',
   },
 
 ]
 
 
+const deliveryItems  = [
+
+  {
+    id: '01',
+    image: process.env.PUBLIC_URL+'/images/delivery_01.jpg',
+    title: '[정기배송] 인기샐러드 5종 하루 한끼',
+    desc: '한 달 동안 매주 1주분(1일1식)의 샐러드를 정기적으로 배송해드리는 상품!',
+    discount:'23%',
+    realprice:'148,000원',
+    price: '114,400원',
+  },
+
+  {
+    id: '02',
+    image: process.env.PUBLIC_URL+'/images/delivery_02.jpg',
+    title: '[정기배송] 인기샐러드 5종 하루 한끼',
+    desc: '2주분(1일1식)의 샐러드를 정기적으로 배송해드리는 상품!',
+    discount:'20%',
+    realprice:'74,600원',
+    price: '59,800원',
+  },
+
+  {
+    id: '03',
+    image: process.env.PUBLIC_URL+'/images/delivery_03.jpg',
+    title: '[정기배송] 2주동안 하루 두끼 샐러드',
+    desc: '매주 1주분(1일2식)의 샐러드를 2주동안 정기적으로 배송해드리는 상품!',
+    discount:'37%',
+    realprice:'182,100원',
+    price: '114,400원',
+  },
+
+  {
+    id: '04',
+    image: process.env.PUBLIC_URL+'/images/delivery_04.jpg',
+    title: '[정기배송] 2주동안 하루 한끼 샐러드',
+    desc: '매주 1주분(1일1식)의 샐러드를 2주동안 정기적으로 배송해드리는 상품! ',
+    discount:'36%',
+    realprice:'93,400원',
+    price: '59,800원',
+  },
+
+  {
+    id: '05',
+    image: process.env.PUBLIC_URL+'/images/delivery_05.jpg',
+    title: '[정기배송] 4주동안 하루 두끼 샐러드',
+    desc: '매주 1주분(1일2식)의 샐러드를 4주동안 정기적으로 배송해드리는 상품! ',
+    discount:'24%',
+    realprice:'284,000원',
+    price: '216,300원',
+  },
+
+  {
+    id: '06',
+    image: process.env.PUBLIC_URL+'/images/delivery_06.jpg',
+    title: '[정기배송] 4주동안 하루 한끼 샐러드',
+    desc: '매주 1주분(1일1식)의 샐러드를 4주동안 정기적으로 배송해드리는 상품!',
+    discount:'23%',
+    realprice:'148,000원',
+    price: '114,400원',
+  },
+
+  {
+    id: '07',
+    image: process.env.PUBLIC_URL+'/images/delivery_07.jpg',
+    title: '[정기배송] 프리미엄 샐러드 + 샐러드',
+    desc: '푸짐한 프리미엄 샐러드와 부담 없는 샐러드로 4주 꾸준히 관리해보세요!',
+    discount:'18%',
+    realprice:'145,600원',
+    price: '119,200원',
+  },
+
+  {
+    id: '08',
+    image: process.env.PUBLIC_URL+'/images/delivery_08.jpg',
+    title: '[정기배송] 인기샐러드 8종 하루 한끼',
+    desc: '한 달 동안 매주 1주분(8종)의 샐러드를 정기적으로 배송해드리는 상품! ',
+    discount:'24%',
+    realprice:'229,600원',
+    price: '175,500원',
+  },
+
+  {
+    id: '09',
+    image: process.env.PUBLIC_URL+'/images/delivery_09.jpg',
+    title: '[정기배송] 샐럽위치와 샐러드',
+    desc: '샐럽위치에 샐러드로 꾸준하게 관리해보세요!',
+    discount:'11%',
+    realprice:'37,300원',
+    price: '33,300원',
+  },
+
+  
+  {
+    id: '10',
+    image: process.env.PUBLIC_URL+'/images/delivery_10.jpg',
+    title: '[정기배송]그린 샐러드',
+    desc: '신선함이 가득한 다양한 야채를 정기배송으로 느낄 수있는 베이직 샐러드!',
+    discount:'25%',
+    realprice:'92,000원',
+    price: '69,300원',
+  },
+
+  {
+    id: '11',
+    image: process.env.PUBLIC_URL+'/images/delivery_11.jpg',
+    title: '[정기배송] 채소믹스 1kg',
+    desc: '진정한 풀파티! 주 1회 배송되는 신선하고 아삭한 채소! (2주 / 4주)',
+    discount:'22%',
+    realprice:'30,800원',
+    price: '24,000원',
+  },
+  {
+    id: '12',
+    image: process.env.PUBLIC_URL+'/images/delivery_12.jpg',
+    title: '[정기배송] 인기샐러드 5종 하루 두끼',
+    desc: '힌 달 동안 매주 1주분(1일2식)의 샐러드를 정기적으로 배송해드리는 상품!',
+    discount:'24%',
+    realprice:'284,000원',
+    price: '216,300원',
+  }
+]
 
 
-
-export {  bestItems, newItems };
+export {  bestItems, newItems, deliveryItems };

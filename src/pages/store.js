@@ -1,4 +1,6 @@
 import {configureStore, createSlice} from '@reduxjs/toolkit';
+import './style/style.css'; 
+
 
 
 const user = createSlice({
@@ -21,13 +23,12 @@ const user = createSlice({
 
 export const { changeName, changeYear } = user.actions
 
-//cart_state
+
 const cart = createSlice({
     name:'cart',
     initialState : [],
     reducers : {
         addItem(state, action){
-            //state.push(action.payload)
             const index = state.findIndex((findId) => {return findId.id === action.payload.id})
             if(index > -1){
                 state[index].count++

@@ -122,6 +122,23 @@ li {
   font-weight: bold;
 }
 
+.cart_btn {
+  border: none;
+  background-color: tan;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  margin: 10px auto 30px;
+}
+
+.sub_btn {
+  border: none;
+  background-color: tan;
+  font-weight: bold;
+  width: 50px;
+  border: 1px solid #000;
+}
+
 /* page ----------------------------------------------- */
 .main_title {
   font-family: "KBO-Dia-Gothic_bold";

@@ -197,7 +197,7 @@ function App() {
 
             return(
               <Col className='items' key={index}>
-               <Link className='links' to={`detail/${index}`} >
+               <Link className='links' to={`news/${index}`} >
                 <div>
               <img src={newArr.image} alt='product_img'/>
               </div>
@@ -235,7 +235,7 @@ function App() {
 
 return(
   <Col className='items' key={index}>
-   <Link className='links' to={`detail/${index}`} >
+   <Link className='links' to={`deliverys/${index}`} >
    <div>
   <img src={best.image} alt='product_img'/>
   </div>
@@ -289,10 +289,13 @@ return(
         </Route>
 
 
-        <Route path='/shop/detail/:id' element={<Detail bests={bests} />} >
-        </Route> 
 
-        <Route path='/detail/:id' element={<Detail bests={bests} />} />
+
+
+  <Route path='/detail/:id' element={<Detail bests={bests} />} />
+  <Route path='/news/:id' element={<Detail bests={news} />} />
+  <Route path='/deliverys/:id' element={<Detail bests={deliverys} />} />
+
 
 
 

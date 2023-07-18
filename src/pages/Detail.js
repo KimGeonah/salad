@@ -9,7 +9,6 @@ export default function Detail(props) {
     const {id} = useParams()
     const dispatch = useDispatch()
 
-
   return (
       <div>
 
@@ -36,6 +35,8 @@ export default function Detail(props) {
 
           <button className='info_btn' onClick={()=>{
               dispatch(addItem({id:bests[id].id, title: bests[id].title, count :1}))
+
+              
           }}>장바구니</button>
 
         </div>

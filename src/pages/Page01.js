@@ -1,23 +1,32 @@
+
 import React from 'react'
 import {Outlet} from 'react-router-dom'
 import './style/style.css'; 
 
-import {bestItems} from '../pages/productData';
-import {Link} from 'react-router-dom'
-import {useState} from 'react'
 
-import { useDispatch } from 'react-redux';
+
+import { Routes,Route,Link} from 'react-router-dom'
+import {useState} from 'react'
+import Detail from './Detail';
+
+
+
+import {bestItems} from './productData';
+
+
+import {useDispatch, useSelector } from 'react-redux';
 import { Col } from 'react-bootstrap';
 import { addItem } from  './store'
 
 
+
 export default function Page01() {
+
   const [bests] = useState(bestItems);
   const dispatch = useDispatch();
   const [itemAdded, setItemAdded] = useState(false);
-
-
-
+  const state = useSelector((state) => state)
+  
   return (
 
     <>
@@ -27,8 +36,12 @@ export default function Page01() {
 
 return(
   
-  <Col className='items' key={index} md={3}>
+
+
+    <Col className='items' key={index} md={3}>
    <Link className='links' to={`detail/${index}`} >
+
+
    <div>
   <img src={best.image} alt='product_img'/>
   </div>
@@ -53,14 +66,24 @@ return(
 }}>장바구니</button>
   </Col>
 
-  
+
+
 )
 
 })}
   { itemAdded && <p className='basket'>장바구니에 추가되었습니다.</p>} 
+
 <Outlet></Outlet>
 </div>
+
+
+<Routes>
+<Route path='/detail/:id' element={<Detail bests={bests} />} />
+
+</Routes>
+
 </>
+
   )
 }
 

@@ -39,7 +39,7 @@ return(
 
 
     <Col className='items' key={index} md={3}>
-   <Link className='links' to={`detail/${index}`} >
+   <Link className='links' to={`/detail/${index}`} >
 
 
    <div>

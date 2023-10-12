@@ -6,7 +6,6 @@ import './style/style.css';
 
 export default function Cart() {
 
-
     const state = useSelector((state) => state)
     const dispatch = useDispatch()
 

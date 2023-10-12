@@ -49,13 +49,12 @@ return(
   <h2 className='product_sub'>{best.title}</h2>
   <ul>
     <li className='discount'>{best.discount}</li>
-
     <li className='price'>{best.price}</li>
   </ul>
   <h2 className='realprice'><strike>{best.realprice}</strike> </h2>
 
 
-</Link>
+</Link> 
 
 <button className='item_btn'onClick={()=>{
   dispatch(addItem({id:best.id, title: best.title,
@@ -72,7 +71,7 @@ return(
 
 })}
   { itemAdded && <p className='basket'>장바구니에 추가되었습니다.</p>} 
-
+ 
 <Outlet></Outlet>
 </div>
 

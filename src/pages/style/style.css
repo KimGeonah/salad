@@ -115,7 +115,7 @@ li {
 
 /* detail ----------------------------------------------- */
 .cart_title {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .cart_title span {
   color: black;
@@ -131,12 +131,25 @@ li {
   margin: 10px auto 30px;
 }
 
-.sub_btn {
+.plus_btn {
   border: none;
   background-color: tan;
   font-weight: bold;
   width: 50px;
-  border: 1px solid #000;
+  margin-right: 5px;
+}
+.plus_btn:hover {
+  background-color: rgb(206, 149, 75);
+}
+
+.minus_btn {
+  border: none;
+  background-color: tan;
+  font-weight: bold;
+  width: 50px;
+}
+.minus_btn:hover {
+  background-color: rgb(206, 149, 75);
 }
 
 /* page ----------------------------------------------- */
@@ -147,22 +160,94 @@ li {
   margin: 10px auto 50px;
 }
 
-.best_item,
-.new_item,
-.delivery_item {
+.best_item {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   width: 1320px;
   margin: 0 auto !important;
 }
-.best_item .items .links,
+.best_item .items .links {
+  text-decoration: none;
+  color: black;
+}
+.best_item .items .links div {
+  width: 350px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.best_item .items .links div img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+.best_item .items .links div img:hover {
+  scale: 1.1;
+  transition: all 0.3s;
+}
+.best_item .items .links .product_sub {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.best_item .items .links .realprice {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: left;
+  color: #b0aeae;
+  padding: 10px 0;
+}
+.best_item .items .links ul {
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+}
+.best_item .items .links ul .discount {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.best_item .items .links ul .price {
+  font-weight: bold;
+  font-size: 20px !important;
+  margin: 0 !important;
+}
+.best_item .items .item_btn {
+  margin-top: 10px;
+  border: 1px solid tan;
+  background-color: #fff;
+  font-size: 15px;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.best_item .items .item_btn:hover {
+  background-color: tan;
+  transition: all 0.3s;
+}
+
+.new_item,
+.delivery_item {
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 1320px;
+  margin: 0 auto !important;
+}
 .new_item .items .links,
 .delivery_item .items .links {
   text-decoration: none;
   color: black;
 }
-.best_item .items .links div,
 .new_item .items .links div,
 .delivery_item .items .links div {
   width: 350px;
@@ -170,19 +255,16 @@ li {
   margin: 0 auto;
   overflow: hidden;
 }
-.best_item .items .links div img,
 .new_item .items .links div img,
 .delivery_item .items .links div img {
   width: 250px;
   margin-bottom: 20px;
 }
-.best_item .items .links div img:hover,
 .new_item .items .links div img:hover,
 .delivery_item .items .links div img:hover {
   scale: 1.1;
   transition: all 0.3s;
 }
-.best_item .items .links .product_sub,
 .new_item .items .links .product_sub,
 .delivery_item .items .links .product_sub {
   margin-top: 20px;
@@ -193,7 +275,6 @@ li {
   margin: 0 auto;
   padding: 10px 0;
 }
-.best_item .items .links .realprice,
 .new_item .items .links .realprice,
 .delivery_item .items .links .realprice {
   font-size: 15px;
@@ -205,14 +286,12 @@ li {
   color: #b0aeae;
   padding: 10px 0;
 }
-.best_item .items .links ul,
 .new_item .items .links ul,
 .delivery_item .items .links ul {
   width: 250px;
   margin: 0 auto;
   display: flex;
 }
-.best_item .items .links ul .discount,
 .new_item .items .links ul .discount,
 .delivery_item .items .links ul .discount {
   color: green;
@@ -220,14 +299,12 @@ li {
   font-size: 20px;
   padding-right: 10px;
 }
-.best_item .items .links ul .price,
 .new_item .items .links ul .price,
 .delivery_item .items .links ul .price {
   font-weight: bold;
   font-size: 20px !important;
   margin: 0 !important;
 }
-.best_item .items .item_btn,
 .new_item .items .item_btn,
 .delivery_item .items .item_btn {
   margin-top: 10px;
@@ -240,7 +317,6 @@ li {
   margin-bottom: 20px;
   font-weight: bold;
 }
-.best_item .items .item_btn:hover,
 .new_item .items .item_btn:hover,
 .delivery_item .items .item_btn:hover {
   background-color: tan;

@@ -36,6 +36,18 @@
 .App .navbar .container .me-auto .nav-link {
   color: black;
   width: 200px;
+  position: relative;
+}
+.App .navbar .container .me-auto .nav-link .basket_count {
+  border-radius: 50%;
+  width: 30px;
+  position: absolute;
+  top: -10px;
+  left: 134px;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  font-size: 15px;
 }
 .App .navbar .container .me-auto .nav-link:hover {
   font-weight: bold;
@@ -61,6 +73,16 @@
 }
 .App .main_menu .card_box {
   width: 400px;
+}
+.App .main_menu .card_box div {
+  overflow: hidden;
+}
+.App .main_menu .card_box div .card_img {
+  cursor: pointer;
+}
+.App .main_menu .card_box div .card_img:hover {
+  scale: 1.1;
+  transition: all 0.3s;
 }
 .App .main_menu .card_box .card_title {
   font-weight: bold;

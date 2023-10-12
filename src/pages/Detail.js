@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'
 import { addItem } from './store'
 import { useDispatch } from 'react-redux'
@@ -8,6 +8,7 @@ export default function Detail(props) {
     const {bests} = props
     const {id} = useParams()
     const dispatch = useDispatch()
+    const [itemAdded, setItemAdded] = useState(false);
 
   return (
       <div>
@@ -35,13 +36,14 @@ export default function Detail(props) {
 
           <button className='info_btn' onClick={()=>{
               dispatch(addItem({id:bests[id].id, title: bests[id].title, count :1}))
-
+              setItemAdded(true);
+              setTimeout(() => setItemAdded(false), 1500); 
               
           }}>장바구니</button>
 
         </div>
 
-
+        { itemAdded && <p className='basket'>장바구니에 추가되었습니다.</p>} 
       </div>
     
       </div>

@@ -8,15 +8,15 @@ const user = createSlice({
 
     initialState : {name :'김건아', memberYear :1 },
 
-    reducers : {
+/*     reducers : {
 
         changeName(state){
-            state.name = state.name + ' [ 아무거나 ] '
+            state.name = state.name + ' 생년월일 : 950115 '
         },
         changeYear(state, action){
             state.memberYear += action.payload
         }
-    }
+    } */
 
 }) //createSlice
 
@@ -33,7 +33,7 @@ const cart = createSlice({
             if(index > -1){
                 state[index].count++
             }else{
-                state.push(action.payload)
+                state.push({...action.payload,price:0})
             }
         }, //addItem
         deleteItem(state,action){

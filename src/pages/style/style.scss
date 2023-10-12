@@ -124,7 +124,7 @@ li{list-style: none;}
 /* detail ----------------------------------------------- */
 
 .cart_title{
-  margin-top: 50px;
+  margin: 50px 0;
   span{
     color: black;
     font-weight: bold;
@@ -140,13 +140,28 @@ li{list-style: none;}
   margin: 10px auto 30px;
 }
 
-.sub_btn{
+.plus_btn{
   border: none;
   background-color: tan;
   font-weight: bold;
   width: 50px;
-  border: 1px solid #000;
+  margin-right: 5px;
+  &:hover{
+    background-color: rgb(206, 149, 75);
+  }
 }
+
+
+.minus_btn{
+  border: none;
+  background-color: tan;
+  font-weight: bold;
+  width: 50px;
+  &:hover{
+    background-color: rgb(206, 149, 75);
+  }
+}
+
 
 
 
@@ -161,14 +176,99 @@ li{list-style: none;}
         margin: 10px auto 50px;
     }
 
-  .best_item,
-  .new_item,
-  .delivery_item{
+  .best_item{
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     width: 1320px;
     margin: 0 auto !important;
+    .items{
+
+      .links{
+        text-decoration: none;
+        color: black;
+        div{
+          width: 350px;
+          height: 250px;
+          margin: 0 auto;
+          overflow: hidden;
+          img{
+            width: 250px;
+            margin-bottom: 20px;
+            &:hover{
+              scale: 1.1;
+              transition: all 0.3s;
+            }
+          }
+        }
+
+
+        .product_sub{
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: left;
+          width: 250px;
+          margin: 0 auto;
+          padding: 10px 0; 
+        }
+
+        .realprice{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 10px;
+            width: 250px;
+            margin: 0 auto;
+            text-align: left;
+            color: #b0aeae;
+            padding: 10px 0;
+            
+          }
+        ul{
+            width: 250px;
+            margin: 0 auto;
+            display: flex;
+            .discount{
+                color: green;
+                font-weight: bold;
+                font-size: 20px;
+               padding-right: 10px;
+            }
+            .price{
+                    font-weight: bold;
+                    font-size: 20px !important;
+                    margin: 0 !important;
+            }
+            
+        }
+        
+
+      }
+
+      .item_btn{
+        margin-top: 10px;
+        border: 1px solid tan;
+        background-color: #fff;
+        font-size: 15px;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        &:hover{
+          background-color: tan;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  .new_item,
+  .delivery_item{
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 1320px;
+    margin: 0 auto !important;
+    
 
     .items{
 

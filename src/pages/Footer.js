@@ -12,7 +12,7 @@ const Footer = () => {
 
                         <ul>
                             <li><span>회사명</span> 주식회사 옳은</li>
-                            <li><span>주소</span> 서울 강남구 봉은사로37길 7-9 3F</li>
+                            <li><span>주소</span> 서울 강남구 봉은사로37길 7-9 2F</li>
                             <li><span>통신판매번호</span> 제2022-서울강남-05940호</li>
                         </ul>
                         <p>© 2023 슬림쿡. All rights reserved.</p>
